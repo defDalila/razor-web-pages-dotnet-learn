@@ -5,3 +5,39 @@
 }
 
 <h1>Lista Livros 📚</h1>
+
+<table class="table mt-auto">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Título</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Gênero</th>
+            <th scope="col">Editora</th>
+            <th scope="col">Páginas</th>
+            <th scope="col">Lançamento</th>
+            <th scope="col">Avaliação</th>
+            <th scope="col">Excluir</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var livro in Model.ListaLivros)
+        {
+            <tr>
+                <td>@livro.Id</td>
+                <td>@livro.Titulo</td>
+                <td>@livro.Autor</td>
+                <td>@livro.Genero</td>
+                <td>@livro.Editora</td>
+                <td>@livro.TotalPaginas</td>
+                <td>@livro.DataPublicacao</td>
+                <td>@livro.Avaliacao</td>
+                <td>
+                    <form method="post" asp-page-handler="Delete" asp-route-id="@livro.Id">
+                        <button class="btn btn-danger">Excluir</button>
+                    </form>                   
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

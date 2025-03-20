@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Site.Context;
+using Site.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<EstanteContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao"))
 );
+
+builder.Services.AddScoped<LivroService>();
 
 builder.Services.AddRazorPages();
 
