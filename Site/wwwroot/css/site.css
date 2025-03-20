@@ -1,5 +1,20 @@
+:root {
+    --bgcolor: #282a36;
+    --fgcolor: #f8f8f2;
+    --comment: #6272A4;
+    --currline: #44475A;
+    --pink: #FF79C6;
+    --cyan: #8be9fd;
+    --green: #50fa7b;
+    --purple: #bd93f9;
+    --orange: #ffb86c;
+    --yellow: #f1fa8c;
+    --red: #ff5555;
+}
+
+
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 @media (min-width: 768px) {
